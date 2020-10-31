@@ -1,0 +1,120 @@
+//1.	Even or Odd
+
+
+//2.	lucky number
+function isLucky(n) {
+  let sum = 0;
+  while (n !== 0 ) {
+    sum = sum + n % 10;
+    n = Math.trunc(n / 10)
+  }
+  return sum === 0 || sum % 9 === 0 ? true : false
+}
+
+//3.	Grasshopper – Debug
+
+function weatherInfo (temp) {
+  var c = convertToCelsius(temp)
+  if (c < 0)
+    return (c + " is freezing temperature")
+  else
+    return (c + " is above freezing temperature")
+}
+
+function convertToCelsius (temperature) {
+  var celsius = (temperature - 32) * (5/9)
+  return celsius
+}
+//4.	Grasshopper - Grade book
+
+
+//5.	Determine offspring sex based on genes XX and XY chromosomes
+function chromosomeCheck(sperm) {
+  return sperm === 'XX' ? "Congratulations! You're going to have a daughter." : "Congratulations! You're going to have a son."
+}
+
+return "Congratulations! You're going to have a " + (sperm === 'XY' ? 'son' : 'daughter') + '.';
+
+//6.	Grasshopper - If/else syntax debug
+ function checkAlive (health) {
+  if (health <= 0) return false
+  return true
+
+ return health > 0;
+
+//7.	Fix your code before the garden dies! 
+function rainAmount(mm){
+    return mm < 40 ? `You need to give your plant ${40 - mm}mm of water` : "Your plant has had more than enough water for today!"
+}
+
+var rainAmount=r=>r<40?`You need to give your plant ${40-r}mm of water`:'Your plant has had more than enough water for today!';
+
+//8.	Training JS #6: Basic data types--Boolean and conditional statements if..else
+
+
+//9.	What's the real floor?
+
+
+//10.	Calculate BMI
+
+function bmi(weight, height) {
+  let bmi =  weight / height ** 2;
+  if (bmi <= 18.5) return "Underweight";
+  if (bmi <= 25.0) return "Normal";
+  if (bmi <= 30.0) return "Overweight";
+  if (bmi >  30) return "Obese"
+}
+
+
+
+ return bmi < 18.5 ? "Underweight" : bmi <=25 ? "Normal" : bmi <= 30 ? "Overweight" : "Obese";
+//11.	Fuel Calculator 
+function fuelPrice(litres, pricePerLitre) {
+  let disc = Math.trunc(litres / 2) * 0.05;
+  return disc >= 0.25 ? +(litres * (pricePerLitre - 0.25)).toFixed(2) : +(litres * (pricePerLitre - disc)).toFixed(2)
+}
+
+
+  return Math.round(100 * l * Math.max(p - 0.05 * ~~(l / 2), p - 0.25)) / 100;
+
+
+  var d = Math.min(~~(l / 2), 5);
+  p = p * 100 - d * 5;
+  return Math.round(l * p) / 100;
+
+
+
+//12.	Find the sum of the roots of a quadratic equation
+
+function roots(a,b,c){
+  let d = b * b - 4 * a * c;
+ x1 = (-b + d**0.5) / 2*a;
+ x2 = (-b - d**0.5) / 2*a;
+ return d < 0 ? null : x1 + x2
+
+
+function roots(a,b,c){
+  let d = b * b - 4 * a * c;
+ return d < 0 ? null : +(-b / a).toFixed(2);
+
+
+roots=(a,b,c)=>b*b-4*a*c<0?null:Math.round(-b/a*100)/100;
+
+//13.	Holiday VI - Shark Pontoon
+
+
+//14.	Alan Partridge II - Apple Turnover
+unction apple(x){
+return x ** 2 > 1000 ? 'It\'s hotter than the sun!!' : 'Help yourself to a honeycomb Yorkie for the glovebox.';  
+
+//15.	Simple multiplication
+
+function simpleMultiplication(number) {
+    return number % 2 === 0 ? number * 8 : number * 9;
+//16.	Cat years, Dog years
+
+
+//17.	Area or Perimeter
+
+const areaOrPerimeter = function(l , w) {
+  return l === w ? l * w : (l + w) * 2
