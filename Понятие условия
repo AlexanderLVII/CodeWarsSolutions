@@ -1,0 +1,32 @@
+
+
+//1. Keep up the hoopNot passed
+	function hoopCount (n) {
+   return n >= 10 ?  "Great, now move on to tricks" : "Keep at it until you get it"   }
+
+//2. Chuck Norris VII - True or False? (Beginner)Not passed
+
+function ifChuckSaysSo(){
+  return ! true   }
+
+// 3. Training JS #6: Basic data types--Boolean and conditional statements if..elseNot passed
+
+function trueOrFalse(val){
+  if (! val)    return "false";             
+  else     return "true";    }
+
+// 4. Simple Comparison? Not passed
+
+function add(a, b){
+	return String(a) === String(b) ? true : false   }
+
+//5. Is he gonna survive?Not passed
+
+function hero(bullets, dragons){
+  return bullets / 2 >= dragons ? true : false }
+
+
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+
+const hero = (bullets, dragons) => dragons * 2 <= bullets;
