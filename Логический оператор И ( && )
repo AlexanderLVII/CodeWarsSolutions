@@ -1,0 +1,35 @@
+
+//1)	Is n divisible by x and y
+
+function isDivisible(n, x, y) {
+return n % x === 0 && n % y === 0 ? true : false
+//2)	Is this a triangle
+
+function isTriangle(a,b,c)
+{
+   return (a + b) > c && (a+c)>b && (b+c)>a ?  true : false;
+//3)	Rock Paper Scissors!Not passed
+
+const rps = (p1, p2) => { if (p1 === 'scissors' && p2 === 'paper') return "Player 1 won!";
+                          if (p1 === 'scissors' && p2 === 'rock')  return "Player 2 won!";
+                          if (p2 === 'scissors' && p1 === 'paper') return "Player 2 won!"
+                          if (p2 === 'scissors' && p1 === 'rock')  return "Player 1 won!"
+                          if (p1 === 'paper' && p2 === 'rock')  return "Player 1 won!"
+                          if (p2 === 'paper' && p1 === 'rock')  return "Player 2 won!"
+                          if (p1 === p2) return 'Draw!'
+//4)	L1: Set AlarmNot passed
+
+function setAlarm(employed, vacation){
+  return employed && !vacation ? true : false
+//5)	Can we divide it
+
+function isDivideBy(n, x, y) {
+ return n % x === 0 && n % y === 0 ? true : false
+//6)	Student's Final GradeNot passed
+
+function finalGrade (e, p) {
+  if (e > 90 || p > 10) return 100;
+  if (e > 75 && p >= 5) return 90;
+  if (e > 50 && p >= 2) return 75;
+  return 0;
+
