@@ -1,0 +1,143 @@
+1.	Get Planet Name By ID
+https://www.codewars.com/kata/515e188a311df01cba000003/train/javascript
+function getPlanetName(id){
+  var name;
+  switch(id){
+    case 1:
+      name = 'Mercury';
+      break;
+    case 2:
+      name = 'Venus';
+      break;
+    case 3:
+      name = 'Earth';
+      break;
+    case 4:
+      name = 'Mars';
+      break;
+    case 5:
+      name = 'Jupiter';
+      break;
+    case 6:
+      name = 'Saturn';
+      break;
+    case 7:
+      name = 'Uranus';
+      break;
+    case 8:
+      name = 'Neptune';
+      break;
+  }
+2.	Basic Calculator
+https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/train/javascript
+function calculate(num1, operation, num2) {
+ switch(operation){
+     case '+': return num1 + num2;
+       break;
+     case '-': return num1 - num2;
+       break;
+     case '*': return num1 * num2;
+       break;
+     case '/': 
+       if (num2 === 0) return null;
+      else return num1 / num2;
+       break;
+     default: return null
+ }
+}
+3.	Training JS #8: Conditional statement—switch
+
+https://www.codewars.com/kata/572059afc2f4612825000d8a/train/javascript
+Complete function howManydays, function accept 1 parameters:month, means the month of year, different month has different days (refer to the following table), return a number that how many days in this month(month is always greater than 0, less than or equal to 12).
+function howManydays(month){
+   let res;
+  switch (month) {
+    case 1: 
+    case 3: 
+    case 5: 
+    case 7: 
+    case 8: 
+    case 10: 
+    case 12: res = 31;
+        break;
+    case 2: res = 28;
+        break;
+    case 4: 
+    case 6: 
+    case 9: 
+    case 11: res = 30;
+        break;
+    default: res = 'Wrong month';
+  }
+4.	Basic Mathematical Operations
+
+https://www.codewars.com/kata/57356c55867b9b7a60000bd7/train/javascript
+function basicOp(operation, num1, num2)
+{
+   switch(operation){
+     case '+': return num1 + num2;
+       break;
+     case '-': return num1 - num2;
+       break;
+     case '*': return num1 * num2;
+       break;
+     case '/': 
+       if (num2 === 0) return null;
+      else return num1 / num2;
+       break;
+     default: return null
+ }
+}
+
+5.	Switch it Up!
+
+https://www.codewars.com/kata/5808dcb8f0ed42ae34000031/train/javascript
+When provided with a number between 0-9, return it in words.
+Input :: 1
+Output :: "One".
+
+function switchItUp(n){
+  switch(n){
+    case 0: return 'Zero';
+      break;
+    case 1: return 'One';
+      break;
+    case 2: return 'Two';
+      break;
+    case 3: return 'Three';
+      break;
+    case 4: return 'Four';
+      break;
+    case 5: return 'Five';
+      break;
+    case 6: return 'Six';
+      break;
+    case 7: return 'Seven';
+      break;
+    case 8: return 'Eight';
+      break;
+    case 9: return 'Nine';
+      break;
+    }
+}
+
+6.	simple calculator
+https://www.codewars.com/kata/5810085c533d69f4980001cf/train/javascript
+if the variables are not numbers or the sign does not belong to the list above a message "unknown value" must be returned.		
+
+function calculator(num1,num2,sign){
+ sign =  typeof(num1) !== "number" || typeof(num2) !== "number" ?  "unknown value" : sign;
+ switch(sign){
+     case '+': return num1 + num2;
+       break;
+     case '-': return num1 - num2;
+       break;
+     case '*': return num1 * num2;
+       break;
+     case '/': 
+       if (num2 === 0) return "unknown value";
+      else return num1 / num2;
+       break;
+     default: return "unknown value"
+ }
+}
