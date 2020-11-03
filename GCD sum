@@ -1,0 +1,14 @@
+// https://www.codewars.com/kata/5dd259444228280032b1ed2a/train/javascript
+function solve(sum,gcd){
+    // sum != gcd checks that both the  
+    // numbers are positive or not  
+    gcdF = (x, y) => x !== 0 ? gcdF(y%x, x) : y;
+    if (gcdF(gcd, sum - gcd) == gcd && sum != gcd)  
+        return [Math.min(gcd, sum - gcd), (sum - Math.min(gcd, sum - gcd))];
+    else  return  -1;  
+ }
+ 
+ 
+function solve(x, y) {
+  return x % y ? -1 : [y, x - y];
+}
