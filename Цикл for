@@ -1,0 +1,201 @@
+Цикл for
+1.	Count the divisors of a number
+https://www.codewars.com/kata/542c0f198e077084c0000c2e/train/javascript
+Count the number of divisors of a positive integer n.
+function getDivisorsCnt(n){
+  let cnt = 0;
+  for (let i = 1; i <= n; i++){
+    cnt = n % i === 0 ? cnt + 1 : cnt;
+  } return cnt;
+}
+
+
+function getDivisorsCnt(n) {
+  for (var d = 0, i = n; i > 0; i--) {
+    if (n % i == 0) d++;
+  }
+  
+  return d;
+}
+
+
+
+2.	Find the divisors! 
+
+https://www.codewars.com/kata/544aed4c4a30184e960010f4/train/javascript
+Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integer's divisors(except for 1 and the number itself), from smallest to largest. If the number is prime return the string '(integer) is prime
+
+function divisors(n) {
+  let arr = [];
+  for (let i = 2; i < n; i++){
+    if (n % i === 0) {
+      arr[arr.length] = i;
+    }
+  } return arr.length === 0 ? n + ' is prime' : arr;
+}
+
+
+function divisors(integer) {
+  var res = []
+  for (var i = 2; i <= Math.floor(integer / 2); ++i) if (integer % i == 0) res.push(i);
+  return res.length ? res : integer + ' is prime'
+};
+
+3.	Sum of the first nth term of Series
+https://www.codewars.com/kata/555eded1ad94b00403000071/train/javascript
+Your task is to write a function which returns the sum of following series upto nth term(parameter). Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+function SeriesSum(n)
+{
+  let sum = 0;
+  for (let i = 1; i <= n; i++){
+    sum += 1 / (3 * i - 2); 
+  } return sum.toFixed(2)
+}
+
+function SeriesSum(n) {
+  for (var s = 0, i = 0; i < n; i++) {
+    s += 1 / (1 + i * 3)
+  }
+  
+  return s.toFixed(2)
+}
+
+
+4.	Grasshopper – Summation
+https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
+Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+var summation = function (n) {
+for (var s = 0, i = 1; i <= n; i++){
+  s = s + i; 
+} return s   }
+
+
+5.	Beginner Series #3 Sum of Numbers
+https://www.codewars.com/kata/55f2b110f61eb01779000053/train/javascript
+Given two integers a and b, which can be positive or negative, find the sum of all the numbers between including them too and return it. If the two numbers are equal return a or b.
+Note: a and b are not ordered!
+
+function getSum( a,b )
+{
+  let x = a <= b ? a : b;
+  let y = a >= b ? a : b;
+  let sum = 0;
+  for (let i = x ; i <= y; i++){
+    sum += i;  
+  } return sum
+}
+
+const GetSum = (a, b) => {
+  let min = Math.min(a, b),
+      max = Math.max(a, b);
+  return (max - min + 1) * (min + max) / 2;
+}
+
+6.	Training JS #10: loop statement –for
+https://www.codewars.com/kata/5721a78c283129e416000999/train/javascript
+Coding in function pickIt, function accept 1 parameter:arr, it's a number array, we need traverse arr by using for loop, if element is odd number, push it to array odd, if it's a even number, push it to array even.
+
+I've defined two array odd and even in the function, and also wrote the return statement. your work is write a for loop
+
+function pickIt(arr){
+  var odd=[],even=[];
+  for (let i = 0; i <= arr.length-1; i++){
+    if (arr[i] % 2 === 0 ) even.push(arr[i]);
+    else odd.push(arr[i]);
+  } 
+  return [odd,even];
+}
+
+function pickIt (arr) {
+  
+  let odd = []
+  let even =[]
+      
+  for (var x of arr) {
+      ((x % 2) ? odd : even).push(x)    
+  }
+      
+  return [odd, even]
+}
+
+
+
+7.	Sum of Multiples
+https://www.codewars.com/kata/57241e0f440cd279b5000829/train/javascript
+Find the sum of all multiples of n below m
+Keep in Mind
+n and m are natural numbers (positive integers)
+m is excluded from the multiples
+function sumMul(n,m){
+  if (n >= m) return "INVALID";
+  let k = n;
+  for (let i = n + 1 ; i < m; i++){
+    n = i % k === 0 ? n + i : n;  
+  } return n
+}
+
+function sumMul(n,m){
+  if (n >= m) return "INVALID";
+
+var sum = 0;
+  for (var i = n; i < m; i+=n) {
+    sum += i;
+  }
+  return sum;
+
+8.	All Star Code Challenge #27
+https://www.codewars.com/kata/5866e26f2e8d9cdbcd0003d7/train/javascript
+посчитать факториал/
+
+function factorial(n){
+  let prod = 1;
+  for (let i = 1; i <= n; i++){
+    prod *= i;  
+  } return prod
+}
+
+function factorial(x){
+return x==0 ? 1 : x * factorial(x-1)
+}
+
+
+
+9.	Draw stairs
+
+https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/javascript
+Given a number n, draw stairs using the letter "I", n tall and n wide, with the tallest in the top left.
+For example n = 3 result in:
+"I\n I\n  I"
+
+function drawStairs(n) {
+  let str = '';
+  for (let i = 1; i < n; i++){
+    str = str +'I\n' + (' ').repeat(i);  
+  } return str +'I';
+}
+
+function drawStairs(n) {
+  let result = [];
+    for (let i = 0; i < n; i++) {
+    result[i] = `${' '.repeat(i)}I`;
+  }
+    return result.join('\n');}
+
+
+function drawStairs(n) {
+let step = "I"
+for(let i=1; i<n;  i++) {
+ step +="\n" + " ".repeat(i) + 'I' ;
+}return step }
+
+10.	Divisible by 9?
+https://www.codewars.com/kata/5f7b1a82be51af00105c82bd/train/javascript
+Given a non-negative integer number represented as a string, which can be arbitrary large. Detect whether it is divisible by 9?
+когда сумма цифр целого числа делится на 99, тогда само число также делится на 9
+
+function divBy9(ns){
+  let sum9 = 0;
+  for (let i = 0; i < ns.length; i++){
+    sum9 = sum9 + +ns[i];  
+  } return sum9 % 9 === 0;
+}
