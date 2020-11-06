@@ -1,0 +1,61 @@
+Цикл do while
+1.	Round up to the next multiple of 5
+https://www.codewars.com/kata/55d1d6d5955ec6365400006d/train/javascript
+Given an integer as input, can you round it to the next (meaning, "higher") multiple of 5?
+
+function roundToNext5(n){
+  let i = n - 1;
+  do {
+    i++;
+  } while(i % 5 !== 0);
+  return i;
+}
+
+2.	Power
+https://www.codewars.com/kata/562926c855ca9fdc4800005b/train/javascript
+The goal is to create a function 'numberToPower(number, power)' that "raises" the number up to power (ie multiplies number by itself power times).
+
+function numberToPower(n, p){
+  if (p === 0) return 1;
+  let i = 0;
+  let m = 1;
+  do {
+    i++;
+    m *= n;
+  } while(i < p);
+  return m;
+}
+
+
+
+
+3.	Training JS #9: loop statement --while and do..while
+https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
+str, it's a string representing the string to pad, we need pad some "*" at leftside or rightside of str
+n, it's a number, how many times to pad the string.
+
+function padIt(str,n){
+  let i=0;
+  do{
+    i++;
+    str = i % 2 === 0 ? str + '*' : '*' + str; 
+  }while (i < n)
+  return str;
+}
+
+
+4.	Halving Sum
+https://www.codewars.com/kata/5a58d46cfd56cb4e8600009d/train/javascript
+Given a positive integer n, calculate the following sum:
+n + n/2 + n/4 + n/8 + ...
+All elements of the sum are the results of integer division.
+
+function halvingSum(n) {
+  let i=0;
+  let sum = n;
+  do{
+    i++;
+    sum += Math.trunc(n / 2 ** i); 
+  }while ( 2** i < n)
+  return sum;
+}
