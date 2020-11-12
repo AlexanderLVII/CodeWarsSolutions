@@ -1,0 +1,58 @@
+Number.isNaN() и isNaN() – проверка на NaN
+1.	Filter the number
+https://www.codewars.com/kata/55b051fac50a3292a9000025/train/javascript
+Your task is to return a number from a string.
+var FilterString = function(value) {
+  let num = '';
+  for (let i = 0; i < value.length;i++){
+    if (isNaN(value[i])) continue;
+    num +=  value[i];
+  }
+  return +num;
+}
+
+dmitrii-n
+const FilterString = v => Number(v.replace(/\D/g, ''));
+
+
+2.	isReallyNaN
+https://www.codewars.com/kata/56c24c58e0c0f741d4001aef/train/javascript
+Write a function isReallyNaN that returns true only if passed in an argument that evalutes to NaN, and returns false otherwise.
+const isReallyNaN = (val) => {
+  // return isNaN(val);  // wasn't working as planned :-(
+  return Number.isNaN(val);
+};
+
+const isReallyNaN = val => val != val
+
+const isReallyNaN = (val) => Number.isNaN(val);
+
+****************** ********************************************************
+Сравнение c NaN
+1.	Find variable which breaks strict comparison!
+https://www.codewars.com/kata/560f8d41cf6e1fe5c900002e/train/javascript
+In JavaScript, there is a special case where strict comparison of the same variable returns false! Try to find out what must be done to get such result!
+
+var x = something;
+x === x // returns false!
+Write a function which will return value for which strict comparison will give false!
+
+function findStrangeValue() {
+  var x = NaN;
+  return !(x === x) ? x : false;
+}
+
+
+function findStrangeValue() {
+  return NaN;
+}
+
+
+****************** ********************************************************
+Неточность вычисления с очень большими и очень маленькими числами
+1.	Is integer safe to use?
+https://www.codewars.com/kata/is-integer-safe-to-use
+Not all integers can be represented by JavaScript/TypeScript. It has space to to represent 53bit signed integers. In this Kata, we've to determine if it is safe to use the integer or not. Make use of the latest ES6 features to find this.
+function SafeInteger(n) {
+  return Number.isSafeInteger(n);
+}
