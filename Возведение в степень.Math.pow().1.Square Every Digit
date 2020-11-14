@@ -1,0 +1,10 @@
+//https://www.codewars.com/kata/546e2562b03326a88e000020/train/javascript
+//Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+function squareDigits(num){
+  let str = '';
+  while(num != 0){
+    str = Math.pow(num % 10,2)  + str;
+    num = (num - num % 10) / 10;
+  }
+  return +str;
+}
