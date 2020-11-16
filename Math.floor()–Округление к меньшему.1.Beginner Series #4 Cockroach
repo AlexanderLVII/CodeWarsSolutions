@@ -1,0 +1,7 @@
+//https://www.codewars.com/kata/beginner-series-number-4-cockroach
+function cockroachSpeed(s) {
+ 		 return Math.floor(s * 100000/3600)
+		}
+		
+const cockroachSpeed2 = s => Math.floor(s / 0.036);
+
