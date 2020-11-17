@@ -1,0 +1,22 @@
+// https://www.codewars.com/kata/tortoise-racing
+  if (v1 >= v2) return null;
+  let t = g / (v2-v1);
+  return [Math.trunc(t), 
+          Math.trunc(t) > 0 ? Math.trunc(t % Math.trunc(t) * 60) : Math.trunc(t*60),
+          Math.trunc(t*60 % Math.trunc(t*60) *60)];
+
+function race2(v1, v2, g) {
+  if (v1 >= v2) return null;
+  let s = Math.trunc(g * 3600 / (v2-v1)); // seconds
+  let h = Math.trunc(s / 3600);
+  let m = Math.trunc(Math.trunc(s / 60) % 60);
+  s = s - h *3600 - m*60;
+  return [h, m, s]; 
+}
+
+
+function race3(v1, v2, g){
+  let time=g/(v2-v1);
+  return v2>v1 ? [Math.floor(time),Math.floor(time*60%60),Math.floor(time*3600%60)] : null;
+}
+
