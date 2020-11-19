@@ -1,0 +1,9 @@
+//https://www.codewars.com/kata/lario-and-muigi-pipe-problem
+function pipeFix(numbers){
+  let m = Math.max(...numbers);
+  let outArr = [numbers[0]];
+  for (let i = numbers[0]+1; i <= m; i++){
+    outArr.push(i)
+  }
+  return outArr;
+}
