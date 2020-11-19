@@ -1,0 +1,12 @@
+// https://www.codewars.com/kata/5e030f77cec18900322c535d
+function minimum(a, x) {
+  let c = Math.trunc(a/x);
+  let d = a % x;
+  if (d === 0 ) return 0;
+  d = a - c * x;
+  c = (c+1)*x -a;
+  return Math.min(c,d);
+}
+
+
+const minimum2 = (a, x) => Math.min(x - a % x, a % x)
