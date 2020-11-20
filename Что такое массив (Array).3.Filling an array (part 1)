@@ -1,0 +1,3 @@
+// https://www.codewars.com/kata/filling-an-array-part-1
+function arr(n) {   let arr = [];   for(let i = 0; i < n; i++){     arr.push(i);   }   return arr; }
+
