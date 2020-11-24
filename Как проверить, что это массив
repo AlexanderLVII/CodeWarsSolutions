@@ -1,0 +1,19 @@
+Как проверить, что это массив
+1.	What is type of variable?
+https://www.codewars.com/kata/what-is-type-of-variable
+https://www.codewars.com/kata/57293671c98f77e84b000065/train/javascript
+Create a function to return true type of variable, i.e.
+	function type(value) {
+  let str = {}.toString.call(value)
+  return str.slice(8, str.length-1).toLowerCase();
+}
+
+function type2(value) {
+  return {}.toString.call(value).slice(8, -1).toLowerCase();
+}
+	
+
+2.	Is every value in the array an array?
+
+https://www.codewars.com/kata/582c81d982a0a65424000201
+const arrCheck = arr => {   for (let el of arr) {     if (!Array.isArray(el)) return false;   }   return true; }
