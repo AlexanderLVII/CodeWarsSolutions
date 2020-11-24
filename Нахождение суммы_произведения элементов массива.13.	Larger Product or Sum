@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/5c4cb8fc3cf185147a5bdd02/train/javascript
+function sumOrProduct(arr, n) {
+  arr.sort( (a, b) => a - b );
+// console.log(arr);
+  let sum = 0, prod = 1;
+  for(let i = 0; i < n; i++){   
+    prod *= arr[i];
+  }
+  arr.reverse();
+  for(let i = 0; i < n; i++){   
+    sum += arr[i];
+// console.log(i + ' ' + sum);    
+  }
+  return sum > prod ? "sum" :   sum < prod ?   "product"  :   "same"
+}
