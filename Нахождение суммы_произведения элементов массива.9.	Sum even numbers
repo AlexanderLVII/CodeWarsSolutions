@@ -1,0 +1,9 @@
+//https://www.codewars.com/kata/586beb5ba44cfc44ed0006c3/train/javascript
+function sumEvenNumbers(arr) {
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] % 2 === 0 ) cnt +=arr[i];                         
+  }
+  return cnt
+}
+
