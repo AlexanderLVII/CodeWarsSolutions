@@ -1,0 +1,46 @@
+Array.prototype.pop() – Удаление последнего элемента в массиве
+
+1.	Backspaces in string
+https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
+Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
+Your task is to process a string with "#" symbols.
+function cleanString(s) {
+	let arr = s.split('');
+  let res = [];
+  for (let i=0; i < arr.length; i++) {
+    if (arr[i] === '#') {
+      res.pop();
+    }
+    else {
+         res.push(arr[i]);
+    }
+  }
+  return res.join('');
+}
+
+
+
+2.	String doubles
+https://www.codewars.com/kata/5a145ab08ba9148dd6000094
+In this Kata, you will write a function doubles that will remove double string characters that are adjacent to each other.
+В этом Ката вы напишете функцию Double, которая удалит двойные строковые символы, расположенные рядом друг с другом.
+function doubles(s){
+  let arr = s.split('');
+  let res = [];
+  let len = 0;
+  for (let i=0; i < arr.length; i++) {
+    if (arr[i] === arr[i+1]) {
+      i += 1;
+    }
+    else {
+         len = res.length; 
+         if (res[len - 1] === arr[i]) res.pop();
+         else  len = res.push(arr[i]);
+    }
+  }
+  return res.join('');
+}
+
+Doubles2=d=s=>(x=s.replace(/(\w)\1/g,""))==s?s:d(x);
+
+const doubles3 = s =>   /(\w)\1/.test(s) ? doubles3(s.replace(/(\w)\1/g, ``)) : s;
